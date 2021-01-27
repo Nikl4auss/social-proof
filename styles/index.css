@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+/* dark grayish magenta */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.5rem;
+}
+
+.social-proof {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  margin: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .social-proof {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 5rem;
+  }
+}
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.title h1 {
+  color: #502050;
+  font-weight: 700;
+}
+.title p {
+  color: #937b92;
+}
+
+@media screen and (min-width: 800px) {
+  .title {
+    flex-basis: 50rem;
+    text-align: left;
+  }
+  .title h1 {
+    font-size: 5rem;
+  }
+}
+.ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.ratings .rating {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+  background-color: #f7f2f7;
+  color: #502050;
+  font-weight: 700;
+}
+.ratings .rating-stars {
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  .ratings {
+    flex-basis: 60rem;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    height: 80%;
+    padding: 0 2rem;
+  }
+  .rating:nth-of-type(1) {
+    align-self: flex-start;
+  }
+  .rating:nth-of-type(2) {
+    align-self: center;
+  }
+  .rating:nth-of-type(3) {
+    align-self: flex-end;
+  }
+
+  .rating-stars {
+    margin-right: 2rem;
+  }
+}
+.verified-buyers {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.verified-buyers .verified-buyer {
+  background-color: #502050;
+  padding: 4rem 1rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+}
+.verified-buyers .buyer-info {
+  display: flex;
+  align-items: center;
+}
+.verified-buyers .buyer-info .buyer-name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  color: white;
+}
+.verified-buyers .buyer-info .buyer-name span {
+  color: #ee68a4;
+}
+.verified-buyers .buyer-info .buyer-img {
+  width: 5rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+.verified-buyers .buyer-review {
+  color: #f7f2f7;
+}
+
+@media screen and (min-width: 800px) {
+  .verified-buyers {
+    flex-direction: row;
+    height: 100%;
+    margin: 5rem;
+  }
+  .verified-buyers .verified-buyer {
+    flex-basis: 40rem;
+    padding: 2rem 4rem;
+    margin: 0 1.5rem;
+  }
+  .verified-buyers .verified-buyer:nth-of-type(1) {
+    transform: translate(0, -2rem);
+  }
+  .verified-buyers .verified-buyer:nth-of-type(3) {
+    transform: translate(0, 2rem);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

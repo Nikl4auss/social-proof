@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+$primary: hsl(300, 43%, 22%) /* very dark magenta */;
+$buyer: hsl(333, 80%, 67%);
+$secondary: hsl(303, 10%, 53%); /* dark grayish magenta */
+$name: hsl(0, 0%, 100%);
+$pinky: hsl(300, 24%, 96%);
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.5rem;
+}
+
+.social-proof {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  margin: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .social-proof {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 5rem;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    color: $primary;
+    font-weight: 700;
+  }
+
+  p {
+    color: $secondary;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .title {
+    flex-basis: 50rem;
+    text-align: left;
+
+    h1 {
+      font-size: 5rem;
+    }
+  }
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3rem;
+
+  .rating {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: $pinky;
+    color: $primary;
+    font-weight: 700;
+  }
+
+  .rating-stars {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .ratings {
+    flex-basis: 60rem;
+  }
+  .rating {
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    height: 80%;
+    padding: 0 2rem;
+
+    &:nth-of-type(1) {
+      align-self: flex-start;
+    }
+    &:nth-of-type(2) {
+      align-self: center;
+    }
+    &:nth-of-type(3) {
+      align-self: flex-end;
+    }
+  }
+
+  .rating-stars {
+    margin-right: 2rem;
+  }
+}
+
+.verified-buyers {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+
+  .verified-buyer {
+    background-color: $primary;
+    padding: 4rem 1rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+  }
+
+  .buyer-info {
+    display: flex;
+    align-items: center;
+
+    .buyer-name {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1.5rem;
+      color: $name;
+      span {
+        color: $buyer;
+      }
+    }
+
+    .buyer-img {
+      width: 5rem;
+      border-radius: 50%;
+      margin-left: 1rem;
+    }
+  }
+  .buyer-review {
+    color: $pinky;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .verified-buyers {
+    flex-direction: row;
+    height: 100%;
+    margin: 5rem;
+
+    .verified-buyer {
+      flex-basis: 40rem;
+      padding: 2rem 4rem;
+      margin: 0 1.5rem;
+
+      &:nth-of-type(1) {
+        transform: translate(0, -2rem);
+      }
+      &:nth-of-type(3) {
+        transform: translate(0, 2rem);
+      }
+    }
+  }
+}
